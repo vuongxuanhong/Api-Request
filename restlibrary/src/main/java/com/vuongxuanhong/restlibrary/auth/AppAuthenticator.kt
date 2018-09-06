@@ -15,7 +15,7 @@ abstract class AppAuthenticator : Authenticator {
 
     lateinit var service: ApiService
 
-    private fun responseCount(response: Response): Int {
+    protected fun responseCount(response: Response): Int {
         var result = 1
         var failed: Response? = response
         while (failed?.priorResponse() != null) {
