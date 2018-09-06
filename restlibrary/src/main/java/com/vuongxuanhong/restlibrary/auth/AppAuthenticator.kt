@@ -9,10 +9,6 @@ import okhttp3.Response
  */
 abstract class AppAuthenticator : Authenticator {
 
-    companion object {
-        private const val TAG = "AppAuthenticator"
-    }
-
     lateinit var service: ApiService
 
     protected fun responseCount(response: Response): Int {
